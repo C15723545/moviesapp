@@ -9,12 +9,20 @@
   </head>
   <body>
   
-  <header class = "navbar navbar-fixed-top navbar-inverse" >
+  <header class = "navbar navbar-fixed-top navbar-dt354" >
     <div class = "container"
       
       <nav>
         <ul class = "nav navbar-nav navbar-right" >
-          <li><%= link_to "Home", root_path %></li>
+		
+		<% if !signed_in? %>
+			<%= link_to "Sign In", login_path %>
+		<% else %>
+			Signed in as: <%= @current_user.name %>
+			<%= link_to "Sign Out", logout_path %>
+         <% end %> 
+		  
+		  <li><%= link_to "Home", root_path %></li>
 		  <li><%= link_to "About", '#' %></li>  
 		  <li><%= link_to "More News", 'http://oscar.go.com' %></li>  
 		  <li><%= link_to "Genres", genres_path %></li> 
@@ -24,8 +32,13 @@
       </nav>
     </div>
   </header>
-  
-	<br>
+  <br>
+  <br>
+	<% flash.each do |key, value| %>
+		<div class="flash <%= key %>">
+			<%= value %>
+		</div>
+	<% end %>
     <%= yield %>
 	 <%= render "layouts/footer" %>	
   </body>
