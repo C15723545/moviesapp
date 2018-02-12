@@ -8447,3 +8447,364 @@ Processing by MoviesController#index as HTML
 Completed 200 OK in 659ms (Views: 596.9ms | ActiveRecord: 3.0ms)
 
 
+Started GET "/movies" for 127.0.0.1 at 2018-02-12 15:05:35 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" LIMIT ? OFFSET ?[0m  [["LIMIT", 3], ["OFFSET", 0]]
+Started GET "/movies" for 127.0.0.1 at 2018-02-12 15:05:46 +0000
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.0ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" LIMIT ? OFFSET ?[0m  [["LIMIT", 3], ["OFFSET", 0]]
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "movies"[0m
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (1786.0ms)
+  Rendered movies/index.html.erb within layouts/application (12242.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 4549ms (Views: 4497.3ms | ActiveRecord: 3.0ms)
+
+
+Completed 200 OK in 15077ms (Views: 14959.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-02-12 15:06:01 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (91.0ms)
+  Rendered users/new.html.erb within layouts/application (118.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 753ms (Views: 693.1ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPriceToMovies (20180212152050)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (3.5ms)[0m  [1m[35mALTER TABLE "movies" ADD "price" decimal[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180212152050"]]
+  [1m[35m (67.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/movies" for 127.0.0.1 at 2018-02-12 15:32:36 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.0ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" LIMIT ? OFFSET ?[0m  [["LIMIT", 3], ["OFFSET", 0]]
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (2761.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 4086ms (Views: 4005.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/genres" for 127.0.0.1 at 2018-02-12 15:33:00 +0000
+Processing by GenresController#index as HTML
+  Rendering genres/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered genres/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 625ms (Views: 584.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2018-02-12 15:33:07 +0000
+Processing by MoviesController#new as HTML
+Completed 500 Internal Server Error in 110ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `logn_path' for #<MoviesController:0x9b8f5d8>
+Did you mean?  login_path
+               logout_path):
+  
+app/helpers/application_helper.rb:13:in `authorise'
+  Rendering C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (923.3ms)
+Started GET "/movies" for 127.0.0.1 at 2018-02-12 15:33:21 +0000
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.0ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" LIMIT ? OFFSET ?[0m  [["LIMIT", 3], ["OFFSET", 0]]
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (56.6ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 725ms (Views: 697.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-02-12 15:33:24 +0000
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 608ms (Views: 582.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-02-12 15:33:33 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WzjunrMAqI1UgXYbt5TLXnJMV/um+C08g6X8dpztmWkyJDjSTU61YknAyZNEmC5bLMu1ko4XTtNIC6LPKZsFQA==", "email"=>"jill@jill.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jill@jill.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 90ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-12 15:33:33 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 559ms (Views: 532.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2018-02-12 15:33:36 +0000
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.0ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" LIMIT ? OFFSET ?[0m  [["LIMIT", 3], ["OFFSET", 0]]
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (49.6ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 543ms (Views: 513.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2018-02-12 15:33:39 +0000
+Processing by MoviesController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering movies/new.html.erb within layouts/application
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/_form.html.erb (88.6ms)
+  Rendered movies/new.html.erb within layouts/application (116.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 658ms (Views: 621.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2018-02-12 15:34:48 +0000
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" LIMIT ? OFFSET ?[0m  [["LIMIT", 3], ["OFFSET", 0]]
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (52.4ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 650ms (Views: 619.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2018-02-12 15:34:50 +0000
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.0ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" LIMIT ? OFFSET ?[0m  [["LIMIT", 3], ["OFFSET", 0]]
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (48.6ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 558ms (Views: 528.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2018-02-12 15:34:59 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered movies/show.html.erb within layouts/application (21.6ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 557ms (Views: 524.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2018-02-12 15:35:11 +0000
+Processing by MoviesController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering movies/new.html.erb within layouts/application
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/_form.html.erb (6.0ms)
+  Rendered movies/new.html.erb within layouts/application (33.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 595ms (Views: 564.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2018-02-12 15:36:21 +0000
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.0ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" LIMIT ? OFFSET ?[0m  [["LIMIT", 3], ["OFFSET", 0]]
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (62.3ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 820ms (Views: 790.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2018-02-12 15:36:24 +0000
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" LIMIT ? OFFSET ?[0m  [["LIMIT", 3], ["OFFSET", 0]]
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (58.2ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 647ms (Views: 618.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2018-02-12 15:36:33 +0000
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" LIMIT ? OFFSET ?[0m  [["LIMIT", 3], ["OFFSET", 0]]
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (65.3ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 734ms (Views: 704.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2018-02-12 15:37:05 +0000
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" LIMIT ? OFFSET ?[0m  [["LIMIT", 3], ["OFFSET", 0]]
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (51.9ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 652ms (Views: 621.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2018-02-12 15:44:56 +0000
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" LIMIT ? OFFSET ?[0m  [["LIMIT", 3], ["OFFSET", 0]]
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (228.7ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 946ms (Views: 885.1ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2018-02-12 15:45:14 +0000
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" LIMIT ? OFFSET ?[0m  [["LIMIT", 3], ["OFFSET", 0]]
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (55.3ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 727ms (Views: 691.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2018-02-12 15:45:51 +0000
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" LIMIT ? OFFSET ?[0m  [["LIMIT", 3], ["OFFSET", 0]]
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (83.8ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 742ms (Views: 686.2ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2018-02-12 15:48:59 +0000
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.0ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" LIMIT ? OFFSET ?[0m  [["LIMIT", 3], ["OFFSET", 0]]
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (52.2ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 663ms (Views: 633.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2018-02-12 15:49:40 +0000
+Processing by MoviesController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering movies/new.html.erb within layouts/application
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/_form.html.erb (6.0ms)
+  Rendered movies/new.html.erb within layouts/application (32.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 662ms (Views: 622.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2018-02-12 15:49:47 +0000
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.0ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" LIMIT ? OFFSET ?[0m  [["LIMIT", 3], ["OFFSET", 0]]
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (49.6ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 594ms (Views: 566.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2018-02-12 16:00:42 +0000
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" LIMIT ? OFFSET ?[0m  [["LIMIT", 3], ["OFFSET", 0]]
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (224.8ms)
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 21180ms (Views: 21142.3ms | ActiveRecord: 5.1ms)
+
+
