@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'pages/Home'
+  get 'pages/about'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   
   controller :sessions do
@@ -18,8 +21,7 @@ Rails.application.routes.draw do
   get '/movies' => 'movies#movie'
   get '/genres' => 'genres#genre'
   get '/users' => 'users#user'
-  
-  
-  root 'movies#index'
+    
+  root 'pages#home'
   
 end

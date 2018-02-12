@@ -6,4 +6,11 @@ module ApplicationHelper
 			@current_user = User.find_by_id(session[:user_id])
 		end
 	end
+	
+	def authorise
+		unless signed_in? 
+			session[:returned_to] = request.fullpath
+			redirect_to logn_path, :notice => "Please sign in to access this page"
+		end
+	end
 end
