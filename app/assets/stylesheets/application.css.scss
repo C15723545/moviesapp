@@ -98,11 +98,16 @@ a {
     margin: auto;
     width: 90%;
     padding: 10px;
-	text-align: center;
 }
 
-.navbar-dt354 {
-     background-color: yellow;
+.textcenter {
+	text-align: center;
+	background-color: #cccccc;
+	padding: 10px;
+}
+
+.navbar-default {
+     background-color: #cccccc;
      border-color: #000000;
 }
 
