@@ -3,5 +3,6 @@ class PagesController < ApplicationController
   end
 
   def about
+	@user = User.find(params[:id])
   end
 end
