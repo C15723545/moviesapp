@@ -29,9 +29,38 @@
   <%= @movie.genre.name %>
 </p>
 
-<%= link_to 'Edit', edit_movie_path(@movie) %> |
-<%= link_to 'Back', movies_path %>
+<h3>Star Rating and Comment</h3>
+	<%= form_for([@movie, Comment.new]) do |form| %>
+	
+	<h4><%= form.label :stars %>
+		<% stars = [1,2,3,4,5]%>
+		<% stars.each do |star|%>
+			<%= form.radio_button :stars, star %><%= star %>
+		<% end %>
+	</h4><br />
+	<%= form.text_area :content, :rows => 4, :cols => 40 %>
+	<div class="actions">
+		<%= form.submit "Post a Comment" %>
+	</div>
+<% end %>
+<br />
+<% if @movie.comments.empty? %>
+	<h4>You are the first to comment</h4>
+<% else %>
+	<h4>What others felt about this:</h4>
+	<% @movie.comments.reverse.each do |comment| %>
+		<li><%= comment.content %> | 
+		<em>Posted <%= time_ago_in_words(comment.created_at) %> ago by 
+		<%= comment.user.name %></em><br /></li>
+	<% end %>
+	<br />
+	<h4>Users Star Rating: <%= number_with_precision(@movie.average_stars, precision: 0) %> </h4>
 
+<% end %>
+<br />
 <hr>
-> <%= link_to 'Create Genre', genres_path %> | 
-<%= link_to 'Movies List', movies_path %> <
+
+< <%= link_to 'Edit the Movie', edit_movie_path(@movie) %> |
+<%= link_to 'Create Genre', genres_path %> | 
+<%= link_to 'Movies List', movies_path %> >
+
