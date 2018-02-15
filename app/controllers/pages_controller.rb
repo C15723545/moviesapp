@@ -1,8 +1,9 @@
 class PagesController < ApplicationController
-  def home
-  end
+	def home
+	end
 
-  def about
-	@user = User.find(params[:id])
-  end
+	def about
+		@title = 'Title';
+		@content = 'This is a paragraph';
+	end
 end

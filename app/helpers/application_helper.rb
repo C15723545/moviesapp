@@ -10,7 +10,7 @@ module ApplicationHelper
 	def authorise
 		unless signed_in? 
 			session[:returned_to] = request.fullpath
-			redirect_to logn_path, :notice => "Please sign in to access this page"
+			redirect_to login_path, :notice => "Please sign in to access this page"
 		end
 	end
 	

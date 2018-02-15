@@ -1,35 +1,28 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-
-<p>
-  <strong>Dob:</strong>
-  <%= @user.dob %>
-</p>
-
-<p>
-  <strong>Gender:</strong>
-  <%= @user.gender %>
-</p>
-
-<p>
-  <strong>Regular:</strong>
-  <%= @user.regular %>
-</p>
-
-<p>
-  <strong>Photo:</strong>
-  <%= image_tag(@user.photo) %>
-</p>
-
+<h3>Details</h3>
+<table width="95%" border="1" cellpadding="5">
+  <tr>
+    <th colspan="2" scope="col"></th>
+  </tr>
+  <tr>
+    <td><strong>User Name:</strong> <%= @user.name %></td>
+    <td rowspan="5"><strong>Photo:</strong><br />
+    <center><%= image_tag(@user.photo) %></center></td>
+  </tr>
+  <tr>
+    <td><strong>User Email:</strong> <%= @user.email %></td>
+  </tr>
+  <tr>
+    <td><strong>Date of Birth</strong> <%= @user.dob %></td>
+  </tr>
+  <tr>
+    <td><strong>Gender:</strong> <%= @user.gender %></td>
+  </tr>
+  <tr>
+    <td><strong>Regular User:</strong> <%= @user.regular %></td>
+  </tr>
+</table>
+<br />
 
 <%= link_to 'Edit User', edit_user_path(@user) %>
 

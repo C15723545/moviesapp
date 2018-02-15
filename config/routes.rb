@@ -12,14 +12,13 @@ Rails.application.routes.draw do
 	get 'logout' => :destroy
 	delete 'logout' => :destroy
   end
-  
-  
+    
   resources :genres
   resources :movies
   resources :users
   
   get 'pages/home'
-  get 'pages/about'
+  get 'about' => 'pages#about', as: 'about'
   get '/movies' => 'movies#movie'
   get '/genres' => 'genres#genre'
   get '/users' => 'users#user'
